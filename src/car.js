@@ -21,6 +21,7 @@ export default class Car {
         console.log(`starting engine ${this.name}, ${this.km}, ${this.people.name}`)
         console.log("this.people.putSeatBelt() - ", this.people.putSeatBelt(), this.people.name)
         console.log("this.createdDummyPeople.putSeatBelt() - ", this.createdDummyPeople.putSeatBelt(), this.createdDummyPeople.name)
+        console.log(" this.people.outfit.dressOut() - ", this.people.outfit.dressOut())
     }
 };
 
