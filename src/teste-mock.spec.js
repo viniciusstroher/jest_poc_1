@@ -1,7 +1,8 @@
 import Car from './car'
 import People from './people'
 import Outfit from './outfit'
-
+import ErrorExample from './error-example'
+import {ErrorExample2, MyError} from './error-example-custom-throw-class'
 jest.resetModules()
 
 //precisa user mock<NomedoMock<
@@ -28,7 +29,10 @@ jest.mock('./people', () => {
 });
 
 describe('teste de mocks', () => {
-    test('teste mock 1 ', () => {
+    beforeEach(() => {
+        jest.clearAllMocks()
+    })
+    test('teste mock 1 - jest mockImplementation', () => {
         const newPeopleTest = new People('dummy test')
         console.log('Retorno putSeatBelt mock - ', newPeopleTest.putSeatBelt())
         console.log('Retorno people mock - ', newPeopleTest.name)
@@ -39,5 +43,13 @@ describe('teste de mocks', () => {
     test('teste mock 2 ', () => {
         const newOutfit = new Outfit('roupa')
         console.log(newOutfit.dressOut())
+    })
+
+    test('teste mock 3  - exception - teste throw no metodo', () => {
+        expect(() => new ErrorExample()).toThrow(Error)
+    })
+
+    test('teste mock 4  - exception custom class - teste throw custom no metodo', () => {
+        expect(() => new ErrorExample2()).toThrow(MyError)
     })
 })
