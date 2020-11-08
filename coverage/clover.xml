@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1604805162691" clover="3.2.0">
-  <project timestamp="1604805162691" name="All files">
-    <metrics statements="12" coveredstatements="9" conditionals="0" coveredconditionals="0" methods="7" coveredmethods="3" elements="19" coveredelements="12" complexity="0" loc="12" ncloc="12" packages="1" files="3" classes="3"/>
+<coverage generated="1604866917140" clover="3.2.0">
+  <project timestamp="1604866917140" name="All files">
+    <metrics statements="14" coveredstatements="11" conditionals="0" coveredconditionals="0" methods="9" coveredmethods="5" elements="23" coveredelements="16" complexity="0" loc="14" ncloc="14" packages="1" files="4" classes="4"/>
     <file name="car.js" path="D:\jest_poc_1\src\car.js">
       <metrics statements="8" coveredstatements="8" conditionals="0" coveredconditionals="0" methods="4" coveredmethods="2"/>
-      <line num="6" count="1" type="stmt"/>
-      <line num="7" count="1" type="stmt"/>
-      <line num="8" count="1" type="stmt"/>
-      <line num="9" count="1" type="stmt"/>
-      <line num="21" count="1" type="stmt"/>
-      <line num="22" count="1" type="stmt"/>
-      <line num="23" count="1" type="stmt"/>
-      <line num="24" count="1" type="stmt"/>
+      <line num="6" count="2" type="stmt"/>
+      <line num="7" count="2" type="stmt"/>
+      <line num="8" count="2" type="stmt"/>
+      <line num="9" count="2" type="stmt"/>
+      <line num="21" count="2" type="stmt"/>
+      <line num="22" count="2" type="stmt"/>
+      <line num="23" count="2" type="stmt"/>
+      <line num="24" count="2" type="stmt"/>
     </file>
     <file name="error-example-custom-throw-class.js" path="D:\jest_poc_1\src\error-example-custom-throw-class.js">
       <metrics statements="3" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="0"/>
@@ -22,6 +22,11 @@
     <file name="error-example.js" path="D:\jest_poc_1\src\error-example.js">
       <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
       <line num="3" count="1" type="stmt"/>
+    </file>
+    <file name="people.js" path="D:\jest_poc_1\src\people.js">
+      <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
+      <line num="6" count="2" type="stmt"/>
+      <line num="7" count="2" type="stmt"/>
     </file>
   </project>
 </coverage>

@@ -1,5 +1,9 @@
 export default function(){
     return new Promise((resolve,reject) => {
-        resolve(true)
+        try{
+            resolve(true)
+        }catch(err){
+            throw new Error(err)
+        }
     })
 }

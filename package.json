@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "node_modules\\.bin\\jest --watchAll --coverage=true",
+    "test": "node_modules\\.bin\\jest --watchAll --coverage=true --detectOpenHandles",
     "start": "babel-node src/index"
   },
   "type": "module",
