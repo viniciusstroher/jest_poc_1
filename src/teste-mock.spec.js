@@ -38,6 +38,9 @@ describe('teste de mocks', () => {
     
     beforeEach(() => {
         jest.clearAllMocks()
+
+        //disable console.log
+        jest.spyOn(console, 'log').mockImplementation(() => {});
     })
 
     test('teste mock 1 - jest mockImplementation', () => {
@@ -61,11 +64,11 @@ describe('teste de mocks', () => {
         expect(async()).resolves.toBe(false)
     })
 
-    // test('teste mock 5 - test return true mocked async', () => {
-    //     expect(async()).resolves.toBe(true)
-    // })
+    test('teste mock 5 - test return true mocked async', () => {
+        expect(async()).resolves.toBe(true)
+    })
 
-    // test('teste mock 6 - test 2 return true mocked async', () => {
-    //     expect(async()).resolves.toBe(true)
-    // })
+    test('teste mock 6 - test 2 return true mocked async', () => {
+        expect(async()).resolves.toBe(true)
+    })
 })
