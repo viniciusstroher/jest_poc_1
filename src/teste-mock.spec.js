@@ -3,6 +3,7 @@ import People from './people'
 import Outfit from './outfit'
 import ErrorExample from './error-example'
 import {ErrorExample2, MyError} from './error-example-custom-throw-class'
+import async from './async'
 jest.resetModules()
 
 //precisa user mock<NomedoMock<
@@ -28,6 +29,10 @@ jest.mock('./people', () => {
     });
 });
 
+const asyncMock = jest.fn().mockResolvedValue(43);
+
+jest.mock('./async', () => jest.fn().mockResolvedValue(false).mockResolvedValueOnce(true));
+
 describe('teste de mocks', () => {
     beforeEach(() => {
         jest.clearAllMocks()
@@ -49,7 +54,15 @@ describe('teste de mocks', () => {
         expect(() => new ErrorExample()).toThrow(Error)
     })
 
-    test('teste mock 4  - exception custom class - teste throw custom no metodo', () => {
-        expect(() => new ErrorExample2()).toThrow(MyError)
+    test('teste mock 4 - test return false mocked async', () => {
+        expect(async()).resolves.toBe(false)
+    })
+
+    test('teste mock 5 - test return true mocked async', () => {
+        expect(async()).resolves.toBe(true)
+    })
+
+    test('teste mock 6 - test 2 return true mocked async', () => {
+        expect(async()).resolves.toBe(true)
     })
 })
